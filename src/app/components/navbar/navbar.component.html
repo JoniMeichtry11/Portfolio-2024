@@ -1,31 +1,37 @@
 <nav class="nav hidden lg:block" aria-label="In-page jump links">
   <ul class="mt-16 w-max">
     <li>
-      <a class="group flex items-center py-3" href="#about">
+      <a class="group flex items-center py-3" href="#about" (click)="scrollAbout()">
         <span
+          [ngClass]="{'expanded': isInViewport['about']}"
           class="nav-indicator mr-4 h-px w-8 bg-secondary transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"
         ></span>
         <span
+          [ngClass]="{'expanded-text': isInViewport['about']}"
           class="nav-text text-xs font-bold uppercase tracking-widest text-textPrimary group-hover:text-primary group-focus-visible:text-primary"
         >About</span>
       </a>
     </li>
     <li>
-      <a class="group flex items-center py-3" href="#experience">
+      <a class="group flex items-center py-3" href="#experience" (click)="scrollExperience()">
         <span
+          [ngClass]="{'expanded': isInViewport['experience']}"
           class="nav-indicator mr-4 h-px w-8 bg-secondary transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"
         ></span>
         <span
+          [ngClass]="{'expanded-text': isInViewport['experience']}"
           class="nav-text text-xs font-bold uppercase tracking-widest text-textPrimary group-hover:text-primary group-focus-visible:text-primary"
         >Experience</span>
       </a>
     </li>
     <li>
-      <a class="group flex items-center py-3" href="#projects">
+      <a class="group flex items-center py-3" href="#projects" (click)="scrollProjects()">
         <span
+          [ngClass]="{'expanded': isInViewport['projects']}"
           class="nav-indicator mr-4 h-px w-8 bg-secondary transition-all group-hover:w-16 group-hover:bg-primary group-focus-visible:w-16 group-focus-visible:bg-primary motion-reduce:transition-none"
         ></span>
         <span
+          [ngClass]="{'expanded-text': isInViewport['projects']}"
           class="nav-text text-xs font-bold uppercase tracking-widest text-textPrimary group-hover:text-primary group-focus-visible:text-primary"
         >Projects</span>
       </a>
